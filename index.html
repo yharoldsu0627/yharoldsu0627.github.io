@@ -137,9 +137,10 @@
     .pub-links { display: flex; flex-wrap: wrap; gap: 6px; }
     .pub-links a { padding: 3px 9px; border: 1px solid var(--line); border-radius: 4px; color: var(--muted); font: 500 .68rem "DM Mono", monospace; }
     .pub-links a:hover { border-color: var(--accent); background: var(--accent); color: #fff; }
+    .pub-static-link { display: inline-block; padding: 3px 9px; border: 1px solid var(--line); border-radius: 4px; color: var(--muted); font: 500 .68rem "DM Mono", monospace; }
     .split-grid { display: grid; grid-template-columns: 1fr; gap: 18px; }
     .education-card { display: grid; grid-template-columns: 104px minmax(0, 1fr); align-items: center; gap: 20px; }
-    .education-card > div { justify-self: end; width: min(100%, 600px); }
+    .education-card > div { justify-self: end; width: min(100%, 560px); }
     .education-logo { width: 96px; height: 96px; object-fit: contain; }
     .info-card { border: 1px solid var(--line); border-radius: 12px; background: var(--surface); padding: 19px; }
     .info-card h3 { margin-bottom: 13px; font-size: .95rem; }
@@ -240,6 +241,7 @@
                   <h3 class="news-year">2026</h3>
                   <div class="timeline">
                     <div class="timeline-item highlight"><time class="timeline-date mono">Sep</time><div class="timeline-copy"><span class="news-key">Geometry-Guided Semantic Reconstruction</span> is at <strong>NeurIPS 2026</strong>.</div></div>
+                    <div class="timeline-item highlight"><time class="timeline-date mono">Apr</time><div class="timeline-copy"><span class="news-key">Reasoning Fails Where Step Flow Breaks</span> is at <strong>ACL 2026</strong>.</div></div>
                     <div class="timeline-item highlight"><time class="timeline-date mono">Mar</time><div class="timeline-copy"><span class="news-key">PointAlign</span> is at <strong>CVPR 2026</strong>, introducing feature-level alignment for 3D vision-language models.</div></div>
                     <div class="timeline-item"><time class="timeline-date mono">Mar</time><div class="timeline-copy">Started as a Research Intern at <a class="news-key" href="https://liuyuan-pal.github.io/lab.html" target="_blank" rel="noopener noreferrer">IGL</a>, HKUST.</div></div>
                   </div>
@@ -259,10 +261,11 @@
             <h2 class="section-title"><span class="num mono">03</span><span data-en="Publications" data-zh="论文发表">Publications</span><span class="line"></span></h2>
             <div class="pub-grid reveal">
               <article class="pub-card">
-                <a class="pub-thumb figure-thumb" href="./figures/geometry.png" target="_blank" rel="noopener noreferrer" aria-label="View Geometry-Guided Semantic Reconstruction figure"><img src="./figures/geometry.png" alt="Geometry-guided semantic reconstruction framework for 3D instance segmentation" loading="lazy"><span class="pub-badge">NeurIPS · 2026.09</span></a>
+                <div class="pub-thumb figure-thumb"><img src="./figures/geometry.png" alt="Geometry-guided semantic reconstruction framework for 3D instance segmentation" loading="lazy"></div>
                 <div class="pub-info">
                   <h3 class="pub-title">Geometry-Guided Semantic Reconstruction for 3D Instance Segmentation</h3>
                   <p class="pub-authors"><strong>Yuanhao Su</strong>, Shaofeng Zhang*</p>
+                  <div class="pub-links"><span class="pub-static-link">NeurIPS 2026</span></div>
                 </div>
               </article>
               <article class="pub-card">
@@ -278,7 +281,7 @@
                 <div class="pub-info">
                   <h3 class="pub-title">FAME: Fusion of Alignment and Multi-view Enhancement for Remote Sensing Image-Text Retrieval</h3>
                   <p class="pub-authors"><strong>Yuanhao Su</strong>, Daoye Zhu*, Zhande Dong, Qifeng Lin, Lingjie Liu, Shuming Bao</p>
-                  <div class="pub-links"><a href="https://doi.org/10.1109/TGRS.2025.3610428" target="_blank" rel="noopener noreferrer">IEEE TGRS ↗</a></div>
+                  <div class="pub-links"><a href="https://doi.org/10.1109/TGRS.2025.3610428" target="_blank" rel="noopener noreferrer">TGRS ↗</a></div>
                 </div>
               </article>
               <article class="pub-card">
