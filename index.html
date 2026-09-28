@@ -119,15 +119,15 @@
     @keyframes pet-cursor { 50% { opacity: 0; } }
     @keyframes news-pulse { 0% { transform: scale(.55); opacity: .8; } 100% { transform: scale(1.7); opacity: 0; } }
     .pub-grid { display: grid; grid-template-columns: 1fr; gap: 18px; }
-    .pub-card { display: grid; grid-template-columns: 220px minmax(0, 1fr); }
+    .pub-card { display: grid; grid-template-columns: 270px minmax(0, 1fr); min-height: 184px; }
     .pub-info { display: flex; flex-direction: column; justify-content: center; }
     .pub-card { position: relative; overflow: hidden; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); box-shadow: 0 4px 18px rgba(32,27,72,.035); transition: transform .22s, border-color .22s, box-shadow .22s; }
     .pub-card:hover { transform: translateY(-4px); border-color: rgba(255,121,0,.55); box-shadow: var(--shadow); }
-    .pub-thumb { position: relative; display: flex; height: 112px; align-items: center; padding: 17px; overflow: hidden; background: linear-gradient(135deg,#2420bb,#e85e19); }
+    .pub-thumb { position: relative; display: flex; height: 184px; align-items: center; padding: 17px; overflow: hidden; background: linear-gradient(135deg,#2420bb,#e85e19); }
+    .pub-thumb img { position: relative; z-index: 1; width: 100%; height: 100%; object-fit: contain; }
+    .pub-thumb.figure-thumb { padding: 8px; background: #fff; }
+    .pub-thumb.figure-thumb::after { display: none; }
     .pub-thumb::after { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 88% 14%,rgba(255,255,255,.34),transparent 32%), linear-gradient(120deg,transparent 25%,rgba(255,255,255,.14) 25%,rgba(255,255,255,.14) 26%,transparent 26%); }
-    .pub-card:nth-child(2) .pub-thumb { background: linear-gradient(135deg,#f36c16,#d62025); }
-    .pub-card:nth-child(3) .pub-thumb { background: linear-gradient(135deg,#13158e,#ee4d33); }
-    .pub-card:nth-child(4) .pub-thumb { background: linear-gradient(135deg,#2721bb,#ea8e14); }
     .pub-thumb-label { position: relative; z-index: 1; color: white; font-size: 1.55rem; line-height: 1; font-weight: 800; letter-spacing: -.07em; }
     .pub-badge { position: absolute; z-index: 2; right: 10px; bottom: 9px; padding: 3px 8px; border-radius: 4px; background: rgba(255,255,255,.92); color: var(--accent-2); font: 500 .63rem "DM Mono", monospace; }
     .pub-info { padding: 14px; }
@@ -172,6 +172,7 @@
       .section { padding-top: 35px; }
       .pub-grid, .split-grid { grid-template-columns: 1fr; }
       .pub-card { display: block; }
+      .pub-thumb { height: 190px; }
       .pub-info { display: block; }
       .education-card { grid-template-columns: 78px minmax(0, 1fr); gap: 14px; }
       .education-card > div { width: 100%; }
@@ -240,7 +241,7 @@
                   <div class="timeline">
                     <div class="timeline-item highlight"><time class="timeline-date mono">Sep</time><div class="timeline-copy"><span class="news-key">Geometry-Guided Semantic Reconstruction</span> is at <strong>NeurIPS 2026</strong>.</div></div>
                     <div class="timeline-item highlight"><time class="timeline-date mono">Mar</time><div class="timeline-copy"><span class="news-key">PointAlign</span> is at <strong>CVPR 2026</strong>, introducing feature-level alignment for 3D vision-language models.</div></div>
-                    <div class="timeline-item"><time class="timeline-date mono">Mar</time><div class="timeline-copy">Started as a Research Intern at <a class="news-key" href="https://liuyuan-pal.github.io/lab.html" target="_blank" rel="noopener noreferrer">IGL</a>.</div></div>
+                    <div class="timeline-item"><time class="timeline-date mono">Mar</time><div class="timeline-copy">Started as a Research Intern at <a class="news-key" href="https://liuyuan-pal.github.io/lab.html" target="_blank" rel="noopener noreferrer">IGL</a>, HKUST.</div></div>
                   </div>
                   <h3 class="news-year">2025</h3>
                   <div class="timeline">
@@ -253,7 +254,52 @@
         </section>
 
 
-        <section class="section" id="publications"><div class="container"><h2 class="section-title"><span class="num mono">03</span><span data-en="Publications" data-zh="论文发表">Publications</span><span class="line"></span></h2><div class="pub-grid reveal"><article class="pub-card"><div class="pub-thumb"><span class="pub-thumb-label">GEOMETRY</span><span class="pub-badge">NeurIPS · 2026.09</span></div><div class="pub-info"><h3 class="pub-title">Geometry-Guided Semantic Reconstruction for 3D Instance Segmentation</h3><p class="pub-authors"><strong>Yuanhao Su</strong>, Shaofeng Zhang*</p><div class="pub-links"><a href="#publications">NeurIPS 2026</a></div></div></article><article class="pub-card"><div class="pub-thumb"><span class="pub-thumb-label">PointAlign</span><span class="pub-badge">CVPR · 2026.03</span></div><div class="pub-info"><h3 class="pub-title">PointAlign: Feature-Level Alignment Regularization for 3D Vision-Language Models</h3><p class="pub-authors"><strong>Yuanhao Su</strong>, Shaofeng Zhang*, Xiaosong Jia, Qi Fan</p><div class="pub-links"><a href="#publications">CVPR 2026</a></div></div></article><article class="pub-card"><div class="pub-thumb"><span class="pub-thumb-label">FAME</span><span class="pub-badge">TGRS · Accepted 2025.09</span></div><div class="pub-info"><h3 class="pub-title">FAME: Fusion of Alignment and Multi-view Enhancement for Remote Sensing Image-Text Retrieval</h3><p class="pub-authors"><strong>Yuanhao Su</strong>, Daoye Zhu*, Zhande Dong, Qifeng Lin, Lingjie Liu, Shuming Bao</p><div class="pub-links"><a href="#publications">IEEE TGRS</a></div></div></article><article class="pub-card"><div class="pub-thumb"><span class="pub-thumb-label">GRID</span><span class="pub-badge">JAG · Accepted 2025.09</span></div><div class="pub-info"><h3 class="pub-title">Geospatial Grid Management: A Comprehensive Framework and Systematic Review of Subdivision, Encoding, Indexing and Storage</h3><p class="pub-authors"><strong>Yuanhao Su</strong>, Daoye Zhu*, Boyong Xiao, Shuang Li, Tengteng Qu, Weixin Zhai, Chengqi Cheng</p><div class="pub-links"><a href="#publications">JAG</a></div></div></article><article class="pub-card"><div class="pub-thumb"><span class="pub-thumb-label">REASON</span><span class="pub-badge">ACL · 2026.04</span></div><div class="pub-info"><h3 class="pub-title">Reasoning Fails Where Step Flow Breaks</h3><p class="pub-authors">Xiaoyu Xu, Yulan Pan, Xiaosong Yuan, Zhihong Shen, Minghao Su, <strong>Yuanhao Su</strong>, Xiaofeng Zhang*</p><div class="pub-links"><a href="#publications">ACL 2026</a></div></div></article><article class="pub-card"><div class="pub-thumb"><span class="pub-thumb-label">3D-LLM</span><span class="pub-badge">AAAI · Under Review</span></div><div class="pub-info"><h3 class="pub-title">Preserving 3D Geometry in 3D-LLMs with Reconstruction-Based Alignment</h3><p class="pub-authors"><strong>Yuanhao Su</strong>, Xiaofeng Zhang, Xiaosong Jia, Shaofeng Zhang*</p><div class="pub-links"><a href="#publications">AAAI 2027</a></div></div></article></div></div></section>
+        <section class="section" id="publications">
+          <div class="container">
+            <h2 class="section-title"><span class="num mono">03</span><span data-en="Publications" data-zh="论文发表">Publications</span><span class="line"></span></h2>
+            <div class="pub-grid reveal">
+              <article class="pub-card">
+                <a class="pub-thumb figure-thumb" href="./figures/geometry.png" target="_blank" rel="noopener noreferrer" aria-label="View Geometry-Guided Semantic Reconstruction figure"><img src="./figures/geometry.png" alt="Geometry-guided semantic reconstruction framework for 3D instance segmentation" loading="lazy"><span class="pub-badge">NeurIPS · 2026.09</span></a>
+                <div class="pub-info">
+                  <h3 class="pub-title">Geometry-Guided Semantic Reconstruction for 3D Instance Segmentation</h3>
+                  <p class="pub-authors"><strong>Yuanhao Su</strong>, Shaofeng Zhang*</p>
+                </div>
+              </article>
+              <article class="pub-card">
+                <a class="pub-thumb figure-thumb" href="./figures/pointalign.png" target="_blank" rel="noopener noreferrer" aria-label="View PointAlign figure"><img src="./figures/pointalign.png" alt="PointAlign training and alignment method" loading="lazy"></a>
+                <div class="pub-info">
+                  <h3 class="pub-title">PointAlign: Feature-Level Alignment Regularization for 3D Vision-Language Models</h3>
+                  <p class="pub-authors"><strong>Yuanhao Su</strong>, Shaofeng Zhang*, Xiaosong Jia, Qi Fan</p>
+                  <div class="pub-links"><a href="https://openaccess.thecvf.com/content/CVPR2026/papers/Su_PointAlign_Feature-Level_Alignment_Regularization_for_3D_Vision-Language_Models_CVPR_2026_paper.pdf" target="_blank" rel="noopener noreferrer">CVPR 2026 ↗</a></div>
+                </div>
+              </article>
+              <article class="pub-card">
+                <a class="pub-thumb figure-thumb" href="./figures/fame.png" target="_blank" rel="noopener noreferrer" aria-label="View FAME figure"><img src="./figures/fame.png" alt="FAME framework for remote sensing image-text retrieval" loading="lazy"></a>
+                <div class="pub-info">
+                  <h3 class="pub-title">FAME: Fusion of Alignment and Multi-view Enhancement for Remote Sensing Image-Text Retrieval</h3>
+                  <p class="pub-authors"><strong>Yuanhao Su</strong>, Daoye Zhu*, Zhande Dong, Qifeng Lin, Lingjie Liu, Shuming Bao</p>
+                  <div class="pub-links"><a href="https://doi.org/10.1109/TGRS.2025.3610428" target="_blank" rel="noopener noreferrer">IEEE TGRS ↗</a></div>
+                </div>
+              </article>
+              <article class="pub-card">
+                <a class="pub-thumb figure-thumb" href="./figures/geospatial-grid.png" target="_blank" rel="noopener noreferrer" aria-label="View geospatial grid figure"><img src="./figures/geospatial-grid.png" alt="Geospatial grid subdivision methods" loading="lazy"></a>
+                <div class="pub-info">
+                  <h3 class="pub-title">Geospatial Grid Management: A Comprehensive Framework and Systematic Review of Subdivision, Encoding, Indexing and Storage</h3>
+                  <p class="pub-authors"><strong>Yuanhao Su</strong>, Daoye Zhu*, Boyong Xiao, Shuang Li, Tengteng Qu, Weixin Zhai, Chengqi Cheng</p>
+                  <div class="pub-links"><a href="https://doi.org/10.1016/j.jag.2025.104860" target="_blank" rel="noopener noreferrer">JAG ↗</a></div>
+                </div>
+              </article>
+              <article class="pub-card">
+                <a class="pub-thumb figure-thumb" href="./figures/stepflow.png" target="_blank" rel="noopener noreferrer" aria-label="View StepFlow figure"><img src="./figures/stepflow.png" alt="StepFlow comparison of token-level and step-level reasoning saliency" loading="lazy"></a>
+                <div class="pub-info">
+                  <h3 class="pub-title">Reasoning Fails Where Step Flow Breaks</h3>
+                  <p class="pub-authors">Xiaoyu Xu, Yulan Pan, Xiaosong Yuan, Zhihong Shen, Minghao Su, <strong>Yuanhao Su</strong>, Xiaofeng Zhang*</p>
+                  <div class="pub-links"><a href="https://arxiv.org/abs/2604.06695" target="_blank" rel="noopener noreferrer">ACL 2026 ↗</a></div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
 
         <section class="section" id="achievements"><div class="container"><h2 class="section-title"><span class="num mono">04</span><span data-en="Achievements" data-zh="荣誉成果">Achievements</span><span class="line"></span></h2><div class="split-grid reveal"><article class="info-card"><h3 data-en="Honors & awards" data-zh="荣誉与奖项">Honors &amp; awards</h3><ul><li>Top 5% · Second-Class University Scholarship, Fuzhou University, 2026</li><li>First Prize (Fujian Division, approximately Top 8%), National Mathematical Contest in Modeling, 2025</li><li>Software Copyright: YiBan APP 1.0 · 2025SR0689058</li></ul></article></div></div></section>
 
