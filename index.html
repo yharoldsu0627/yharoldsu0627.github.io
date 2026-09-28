@@ -83,6 +83,8 @@
     .about-copy p { margin-bottom: 11px; }
     .about-copy strong { color: var(--text); }
     .about-copy .callout { color: var(--accent-2); font-weight: 600; }
+    html[lang="en"] .lang-zh, html[lang="zh-CN"] .lang-en { display: none; }
+    .about-copy a { border-bottom: 1px solid var(--accent-soft); }
     .news-wrap { position: relative; padding-top: 16px; }
     .news-frame { position: relative; height: 295px; overflow: hidden; border: 1px solid rgba(255,121,0,.18); border-radius: 16px; background: var(--surface); box-shadow: 0 8px 28px rgba(255,121,0,.06); }
     .news-frame::before, .news-frame::after { content: ""; position: absolute; z-index: 2; width: 25px; height: 25px; border-color: var(--accent); border-style: solid; pointer-events: none; }
@@ -137,10 +139,10 @@
     .pub-links a:hover { border-color: var(--accent); background: var(--accent); color: #fff; }
     .split-grid { display: grid; grid-template-columns: 1fr; gap: 18px; }
     .education-card { display: grid; grid-template-columns: 104px minmax(0, 1fr); align-items: center; gap: 20px; }
+    .education-card > div { justify-self: end; width: min(100%, 600px); }
     .education-logo { width: 96px; height: 96px; object-fit: contain; }
     .info-card { border: 1px solid var(--line); border-radius: 12px; background: var(--surface); padding: 19px; }
-    .info-card h3 { display: flex; align-items: center; gap: 9px; margin-bottom: 13px; font-size: .95rem; }
-    .info-card h3::before { content: "//"; color: var(--accent); font: .78rem "DM Mono", monospace; }
+    .info-card h3 { margin-bottom: 13px; font-size: .95rem; }
     .info-card p, .info-card li { color: var(--muted); font-size: .86rem; }
     .info-card ul { margin: 0; padding-left: 18px; }
     .info-card li { margin: 5px 0; }
@@ -172,6 +174,7 @@
       .pub-card { display: block; }
       .pub-info { display: block; }
       .education-card { grid-template-columns: 78px minmax(0, 1fr); gap: 14px; }
+      .education-card > div { width: 100%; }
       .education-logo { width: 72px; height: 72px; }
       .skills { grid-template-columns: 1fr; }
       .news-frame { height: 330px; }
@@ -202,15 +205,25 @@
         <div class="reveal">
           <p class="kicker mono" data-en="Hello, I'm" data-zh="你好，我是">Hello, I'm</p>
           <h1>Yuanhao Su</h1>
-          <p class="hero-role" data-en="Undergraduate researcher in 3D vision and multimodal learning" data-zh="三维视觉与多模态学习方向本科生">Undergraduate researcher in 3D vision and multimodal learning</p>
-          <div class="tags"><span class="tag">3D Vision-Language</span><span class="tag">3D Reconstruction</span><span class="tag">Remote Sensing</span><span class="tag">Multimodal Learning</span></div>
+          <p class="hero-role" data-en="Undergraduate Student @FZU" data-zh="福州大学本科生">Undergraduate Student @FZU</p>
+          <div class="tags"><span class="tag">3D Vision</span></div>
           <div class="contact"><a href="mailto:832303114@fzu.edu.cn">832303114@fzu.edu.cn</a><span>·</span><span>+86 13306900585</span></div>
           <div class="socials"><a href="https://scholar.google.com/citations?user=_tfdzEgAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noreferrer">Google Scholar ↗</a><a href="https://github.com/yharoldsu0627" target="_blank" rel="noreferrer">GitHub ↗</a><a href="./CV.pdf" target="_blank">CV ↗</a></div>
         </div>
       </div>
     </section>
 
-        <section class="section" id="about"><div class="container"><h2 class="section-title"><span class="num mono">01</span><span data-en="About" data-zh="关于我">About</span><span class="line"></span></h2><div class="about-copy reveal"><p data-en="My research focuses on 3D vision-language models, geometry-aware representation learning, 3D scene reconstruction, and remote sensing image-text retrieval." data-zh="我的研究方向包括三维视觉语言模型、几何感知表示学习、三维场景重建，以及遥感图像文本检索。">My research focuses on 3D vision-language models, geometry-aware representation learning, 3D scene reconstruction, and remote sensing image-text retrieval.</p><p data-en="I study how to preserve geometric structure while aligning visual and language representations." data-zh="我关注如何在视觉与语言表示对齐过程中保留几何结构。">I study how to preserve geometric structure while aligning visual and language representations.</p><p class="callout" data-en="Feel free to reach out for research collaborations, questions, or a conversation." data-zh="欢迎通过邮件联系我，交流研究合作、问题或想法。">Feel free to reach out for research collaborations, questions, or a conversation.</p></div></div></section>
+        <section class="section" id="about">
+          <div class="container">
+            <h2 class="section-title"><span class="num mono">01</span><span data-en="About" data-zh="关于我">About</span><span class="line"></span></h2>
+            <div class="about-copy reveal">
+              <p data-en="I am an undergraduate student at Fuzhou University, majoring in Computer Science and Software Engineering." data-zh="我是福州大学的本科生，主修计算机科学与软件工程。">I am an undergraduate student at Fuzhou University, majoring in Computer Science and Software Engineering.</p>
+              <p class="lang-en">During my undergraduate studies, I have been fortunate to work with <a href="https://sherrylone.github.io/" target="_blank" rel="noopener noreferrer">Shaofeng Zhang</a>, <a href="https://weiyixue999.github.io/" target="_blank" rel="noopener noreferrer">Weiyi Xue</a>, and <a href="https://liuyuan-pal.github.io/" target="_blank" rel="noopener noreferrer">Yuan Liu</a>, whose guidance has shaped my academic journey.</p>
+              <p class="lang-zh">在本科学习期间，我有幸与 <a href="https://sherrylone.github.io/" target="_blank" rel="noopener noreferrer">Shaofeng Zhang</a>、<a href="https://weiyixue999.github.io/" target="_blank" rel="noopener noreferrer">Weiyi Xue</a> 和 <a href="https://liuyuan-pal.github.io/" target="_blank" rel="noopener noreferrer">Yuan Liu</a> 合作；他们的指导塑造了我的学术道路。</p>
+              <p data-en="My research lies in 3D Vision." data-zh="我的研究方向是三维视觉。">My research lies in 3D Vision.</p>
+            </div>
+          </div>
+        </section>
 
         <section class="section" id="news">
           <div class="container">
@@ -227,12 +240,11 @@
                   <div class="timeline">
                     <div class="timeline-item highlight"><time class="timeline-date mono">Sep</time><div class="timeline-copy"><span class="news-key">Geometry-Guided Semantic Reconstruction</span> is at <strong>NeurIPS 2026</strong>.</div></div>
                     <div class="timeline-item highlight"><time class="timeline-date mono">Mar</time><div class="timeline-copy"><span class="news-key">PointAlign</span> is at <strong>CVPR 2026</strong>, introducing feature-level alignment for 3D vision-language models.</div></div>
-                    <div class="timeline-item"><time class="timeline-date mono">Mar</time><div class="timeline-copy">Started research on 3D point refinement for scene reconstruction at HKUST.</div></div>
+                    <div class="timeline-item"><time class="timeline-date mono">Mar</time><div class="timeline-copy">Started as a Research Intern at <a class="news-key" href="https://liuyuan-pal.github.io/lab.html" target="_blank" rel="noopener noreferrer">IGL</a>.</div></div>
                   </div>
                   <h3 class="news-year">2025</h3>
                   <div class="timeline">
                     <div class="timeline-item highlight"><time class="timeline-date mono">Sep</time><div class="timeline-copy"><span class="news-key">FAME</span> and <span class="news-key">Geospatial Grid Management</span> were accepted by <strong>TGRS</strong> and <strong>JAG</strong>.</div></div>
-                    <div class="timeline-item"><time class="timeline-date mono">2025</time><div class="timeline-copy">Received First Prize in the Fujian Division of the National Mathematical Contest in Modeling.</div></div>
                   </div>
                 </div>
               </div>
